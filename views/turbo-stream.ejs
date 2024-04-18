@@ -1,0 +1,30 @@
+
+<turbo-stream action="update" target="frame-A">
+    <template>
+        <h3>Replaced Frame A: <%= Math.round(Math.random()*100) %></h3>
+        <p><a href="/content-A.html">Change Content A</a></p>
+    </template>
+</turbo-stream>
+
+
+<turbo-stream action="update" target="frame-B">
+    <template>
+        <h3>Replaced Frame B: <%= Math.round(Math.random()*100) %></h3>
+        <p><a href="/content-B.html">Change Content B</a></p>
+    </template>
+</turbo-stream>
+
+
+<turbo-stream action="update" target="frame-C">
+    <template>
+        <h3>Replaced Frame C: <%= Math.round(Math.random()*100) %></h3>
+        <p><a href="/content-C">Change Content C</a></p>
+    </template>
+</turbo-stream>
+
+
+<turbo-stream action="append" target="frame-D">
+    <template>
+        <span>Appended to Frame D: <%= Math.round(Math.random()*100) %> </span>
+    </template>
+</turbo-stream>

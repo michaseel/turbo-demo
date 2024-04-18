@@ -1,0 +1,13 @@
+<turbo-stream action="update" target="cart-badge">
+    <template>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <%= cart.length %>
+        </span>
+    </template>
+</turbo-stream>
+
+<turbo-stream action="update" target="cart-popover-content">
+    <template>
+        <%- include('partials/cartContent', {cart}); %>
+    </template>
+</turbo-stream>

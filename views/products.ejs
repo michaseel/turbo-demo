@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head'); %>
+
+<body>
+<main>
+    <%- include('partials/header'); %>
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-4 row-cols-sm-3">
+            <% products.forEach((product) => { %>
+                <%- include('partials/productCard', {product:product}); %>
+            <% }); %>
+        </div>
+    </div>
+    <%- include('partials/footer'); %>
+</main>
+
+<style>
+    main {
+        // background-color: lightgray;
+    }
+    /*
+    html {
+
+    }
+    body {
+        background-color: gray;
+    }
+
+    main {
+        width: 1000px;
+        background-color: lightgray;
+        transform: translateX(5.132487%) rotateX(49deg) rotateZ(-35deg);
+        transform-style: preserve-3d;
+        transform-origin: right top;
+    }
+    main:before {
+        background-color: grey;
+        box-shadow: -20px 20px 20px #00000080;
+        position: absolute;
+        inset: 0;
+        content: "";
+        transform: translateZ(-10px);
+    }
+
+    .card {
+        background-color: white;
+        padding: 10px;
+        position: relative;
+        transition: transform 0.5s;
+        transform-origin: bottom;
+        transform-style: preserve-3d;
+        transform: rotate3d(1, 1, 0, 15deg) translateZ(39px) rotate(1deg)
+    }
+    .card:before, .card:after {
+        background-color: inherit;
+        position: absolute;
+        content: "";
+        filter: brightness(50%);
+        transform-origin: right top;
+    }
+    .card:before {
+        inset: 0 100% 0 -10px;
+        transform: rotateY(-90deg);
+    }
+    .card:after {
+        inset: 100% 0 -10px 0;
+        transform: rotateX(-90deg);
+    }
+
+    .card:hover:before {
+        inset: 0 100% 0 -50px;
+    }
+    .card:hover:after {
+        inset: 100% 0 -50px 0;
+    }
+*/
+</style>
+
+
+</body>
+</html>

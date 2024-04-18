@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head'); %>
+<body>
+    <%- include('partials/header'); %>
+
+    <style>
+        .demo.container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .turbo-frame {
+            border: 2px dashed red;
+            padding: 30px;
+            margin-bottom: 30px;
+            flex-basis: 49%;
+
+            display: inline-block;
+            position: relative;
+        }
+        .turbo-frame:before {
+            content: '<turbo-frame>';
+            position: absolute;
+            top: -11px;
+            left: 10px;
+            font-size: 12px;
+            background-color: white;
+        }
+    </style>
+    <div class="container mb-3">
+        <h1>Hotwire Turbo Demo</h1>
+    </div>
+
+    <div class="container demo">
+
+
+
+        <turbo-frame class="turbo-frame" id="frame-A">
+            <h3>A</h3>
+            <a href="/content-A.html">change Content</a>
+        </turbo-frame>
+
+        <turbo-frame class="turbo-frame" id="frame-B" asrc="/content-B.html" loading="lazy">
+            <h3>B</h3>
+        </turbo-frame>
+
+
+
+        <turbo-frame class="turbo-frame" id="frame-C">
+            <h3>C</h3>
+            <form action="/content-C" method="GET">
+                <label for="lastname" class="form-label text-black">Last Name</label>
+                <input type="text" name="lastname" id="lastname">
+                <button type="submit">Senden</button>
+                <button type="reset">Reset</button>
+            </form>
+        </turbo-frame>
+
+        <turbo-frame class="turbo-frame" id="frame-D">
+            <h3>D</h3>
+
+        </turbo-frame>
+
+        <p>
+            <a href="/content-D.html" data-turbo-frame="frame-D">change Content of Frame D</a>
+        </p>
+
+        <p>
+            <a href="/turbo-stream" data-turbo-method="post">Use turbo-stream to update multiple frames</a>
+        </p>
+
+
+    </div>
+
+
+
+    <%- include('partials/footer'); %>
+</body>
+</html>

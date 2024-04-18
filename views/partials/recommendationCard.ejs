@@ -1,0 +1,13 @@
+<div class="col mb-5">
+    <div class="card h-100 shadow">
+        <a href="/product?pid=<%= product.id %>" target="_top">
+            <img class="card-img-top" src="<%= product.thumbnail %>" alt="Card image cap" style="height: 200px">
+        </a>
+        <div class="card-body position-relative">
+            <a href="/product?pid=<%= product.id %>" target="_top" class="position-absolute top-0 bottom-0 start-0 end-0" > </a>
+            <h5 class="card-title"><%= product.title %></h5>
+            <p class="card-text pb-3"><%= product.description %></p></p>
+            <p class="h4 bottom-0 position-absolute"><%= product.price %> €</p>
+        </div>
+    </div>
+</div>

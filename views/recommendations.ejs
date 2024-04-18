@@ -1,0 +1,29 @@
+<turbo-frame id="recommendations">
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col">
+                <h3>Recommendations</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <a href="/recommendations?pid=<%= pid %>&page=<%= page -1%>">Previous</a>
+            </div>
+            <div class="col"></div>
+            <div class="col text-end">
+                <a href="/recommendations?pid=<%= pid %>&page=<%= page +1%>">Next</a>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <% recommendations.forEach(function(product) { %>
+                <%- include('partials/recommendationCard', {product:product}); %>
+            <% }); %>
+        </div>
+
+    </div>
+</turbo-frame>

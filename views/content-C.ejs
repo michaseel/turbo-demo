@@ -1,0 +1,12 @@
+<turbo-frame id="frame-C">
+    <h3>Frame C</h3>
+    <% if(lastname){ %>
+        <p>thats what you submitted: Lastname: <strong><%= lastname %></strong></p>
+    <% } %>
+    <form action="/content-C" method="GET">
+        <label for="lastname" class="form-label text-black">Last Name</label>
+        <input type="text" name="lastname" id="lastname" value="<%= lastname %>">
+        <button type="submit">Senden</button>
+        <button type="reset">Reset</button>
+    </form>
+</turbo-frame>

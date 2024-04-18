@@ -1,0 +1,19 @@
+<div class="col mb-5">
+    <div class="card h-100 shadow">
+        <a href="/product?pid=<%= product.id %>">
+            <img class="card-img-top" src="<%= product.thumbnail %>" alt="Card image cap" style="height: 200px">
+        </a>
+        <div class="card-body position-relative">
+            <a href="/product?pid=<%= product.id %>" class="position-absolute top-0 bottom-0 start-0 end-0" > </a>
+            <h5 class="card-title"><%= product.title %></h5>
+            <p class="card-text"><%= product.description %></p></p>
+
+        </div>
+        <div class="card-footer">
+            <form action="/addToCart?pid=<%= product.id %>" method="post">
+                <p class="h3 float-start"><%= product.price %> €</p>
+                <button type="submit" class="btn btn-warning float-end">Add to cart</button>
+            </form>
+        </div>
+    </div>
+</div>

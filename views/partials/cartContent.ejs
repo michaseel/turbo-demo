@@ -1,0 +1,15 @@
+<turbo-frame id="cart-popover-content">
+    <div class="cart-content text-start p-2">
+        <h3>Cart</h3>
+
+        <ul class="list-group">
+            <% cart.forEach((cartItem) => { %>
+                <li class="list-group-item">
+                    <strong><%= cartItem.quantity %>x</strong>
+                    <%= cartItem.title %>
+
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</turbo-frame>
